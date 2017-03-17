@@ -2,10 +2,12 @@ Hubot RSS Reader
 ================
 RSS Reader for each Chat Channels, works with Hubot.
 
-[![Circle CI](https://circleci.com/gh/shokai/hubot-rss-reader.svg?style=svg)](https://circleci.com/gh/shokai/hubot-rss-reader)
+This project was forked from ![hubot-rss-reader](https://github.com/shokai/hubot-rss-reader)
+from ![shokai](https://github.com/shokai) with the fix from ![yynozk](https://github.com/yynozk)
+and published as ![hubot-rss-rolf](https://www.npmjs.com/package/hubot-rss-rolf) to make it useable for rocketchat again.
 
-- https://github.com/shokai/hubot-rss-reader
-- https://www.npmjs.org/package/hubot-rss-reader
+- https://github.com/Flipez/hubot-rss-rolf
+- https://www.npmjs.org/package/hubot-rss-rolf
 
 ![screen shot](http://gyazo.com/234dfb14d76bb3de9efd88bfe8dc6522.png)
 
@@ -19,13 +21,13 @@ Requirements
 Install
 -------
 
-    % npm install hubot-rss-reader -save
+    % npm install hubot-rss-rolf -save
     % npm install coffee-script@">=1.10.0" -save
 
 ### edit `external-script.json`
 
 ```json
-["hubot-rss-reader"]
+["hubot-rss-rolf"]
 ```
 
 ### Configure (ENV vars)
@@ -45,14 +47,14 @@ Usage
 
 ### add
 
-    hubot rss add https://github.com/shokai.atom
+    hubot rss add https://github.com/Flipez.atom
     # or
-    hubot rss register https://github.com/shokai.atom
+    hubot rss register https://github.com/Flipez.atom
 
 
 ### delete
 
-    hubot rss delete https://github.com/shokai.atom
+    hubot rss delete https://github.com/Flipez.atom
     hubot rss delete #room_name
 
 ### list
