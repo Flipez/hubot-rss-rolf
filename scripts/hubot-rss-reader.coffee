@@ -2,14 +2,14 @@
 #   Hubot RSS Reader
 #
 # Commands:
-#   hubot rss add https://github.com/shokai.atom
-#   hubot rss delete http://shokai.org/blog/feed
+#   hubot rss add https://github.com/Flipez.atom
+#   hubot rss delete https://brauser.io/index.xml
 #   hubot rss delete #room_name
 #   hubot rss list
 #   hubot rss dump
 #
 # Author:
-#   @shokai
+#   @Flipez
 
 'use strict'
 
