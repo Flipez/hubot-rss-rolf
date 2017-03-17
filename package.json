@@ -1,7 +1,7 @@
 {
-  "name": "hubot-rss-reader",
+  "name": "hubot-rss-rolf",
   "private": false,
-  "version": "0.8.3",
+  "version": "1.0.0",
   "description": "Hubot RSS Reader",
   "main": "index.coffee",
   "scripts": {
@@ -12,16 +12,16 @@
     "rss",
     "feed"
   ],
-  "author": "Sho Hashimoto <hashimoto@shokai.org>",
+  "author": "Robert Müller <code@brauser.io>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shokai/hubot-rss-reader.git"
+    "url": "git://github.com/Flipez/hubot-rss-rolf.git"
   },
   "bugs": {
-    "url": "https://github.com/shokai/hubot-rss-reader/issues"
+    "url": "https://github.com/Flipez/hubot-rss-rolf/issues"
   },
-  "homepage": "https://github.com/shokai/hubot-rss-reader",
+  "homepage": "https://github.com/Flipez/hubot-rss-rolf",
   "dependencies": {
     "async": "*",
     "bluebird": "*",
