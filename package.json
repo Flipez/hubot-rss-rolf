@@ -1,7 +1,7 @@
 {
   "name": "hubot-rss-rolf",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hubot RSS Reader",
   "main": "index.coffee",
   "scripts": {
