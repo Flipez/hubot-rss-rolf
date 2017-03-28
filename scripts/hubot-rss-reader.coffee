@@ -171,6 +171,9 @@ module.exports = (robot) ->
     else
       msg.send feeds.join "\n"
 
+  robot.respond /rss\s+version$/i, (msg) ->
+    msg.send "Moin, this is Rolf (#{package_json.version})"
+
   robot.respond /rss dump$/i, (msg) ->
     feeds = checker.getAllFeeds()
     msg.send JSON.stringify feeds, null, 2
