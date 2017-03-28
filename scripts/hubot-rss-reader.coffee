@@ -140,7 +140,8 @@ module.exports = (robot) ->
           feeds.map (i) -> " * #{i.url}"
         ]).join '\n'
     .catch (err) ->
-      msg.send "[ERROR] #{err}"
+      if process.env.HUBOT_RSS_PRINT_ERRORS is 'true'
+        msg.send "[ERROR] #{err}"
       logger.error err.stack
 
 
