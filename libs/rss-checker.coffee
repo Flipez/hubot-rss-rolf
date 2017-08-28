@@ -154,11 +154,16 @@ module.exports = class RSSChecker extends events.EventEmitter
   deleteFeed: (room, url) ->
     new Promise (resolve, reject) =>
       feeds = @getFeeds room
-      unless _.includes feeds, url
+      if _.includes feeds, url
+        feeds.splice feeds.indexOf(url), 1
+        @setFeeds room, feeds
+        resolve "deleted #{url}"
+      else if _.includes feeds, "#{url}/"
+        feeds.splice feeds.indexOf("#{url}/"), 1
+        @setFeeds room, feeds
+        resolve "deleted #{url}/"
+      else
         return reject "#{url} is not registered"
-      feeds.splice feeds.indexOf(url), 1
-      @setFeeds room, feeds
-      resolve "deleted #{url}"
 
   deleteRoom: (name) ->
     new Promise (resolve, reject) =>
