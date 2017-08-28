@@ -60,7 +60,6 @@ Usage
 ### list
 
     hubot rss list
-    hubot rss dump
 
 
 Test
