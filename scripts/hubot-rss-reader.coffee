@@ -29,6 +29,7 @@ process.env.HUBOT_RSS_PRINTIMAGE   ||= "true"
 process.env.HUBOT_RSS_PRINTERROR   ||= "true"
 process.env.HUBOT_RSS_IRCCOLORS    ||= "false"
 process.env.HUBOT_RSS_LIMIT_ON_ADD ||= 5
+process.env.HUBOT_RSS_DUMP_USERS   ||= ""
 
 module.exports = (robot) ->
 
@@ -172,3 +173,10 @@ module.exports = (robot) ->
 
   robot.respond /rss\s+version$/i, (msg) ->
     msg.send "Moin, this is Rolf (#{package_json.version})"
+
+  robot.respond /rss dump$/i, (msg) ->
+    feeds = checker.getAllFeeds()
+    if msg.message.user.name in process.env.HUBOT_RSS_DUMP_USERS.split ","
+      msg.send JSON.stringify feeds, null, 2
+    else
+      msg.send "not allowed"
