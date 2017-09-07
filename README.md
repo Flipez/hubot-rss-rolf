@@ -41,7 +41,7 @@ Install
     export HUBOT_RSS_PRINTERROR=false   # print error message (default is "true")
     export HUBOT_RSS_IRCCOLORS=true     # use IRC color message (default is "false")
     export HUBOT_RSS_LIMIT_ON_ADD=false # limit printing entries on add new feed. (default is 5)
-    export HUBOT_RSS_DUMP_USERS=""      # limit dump to special user (eg. "user1,user2")
+    export HUBOT_RSS_DUMP_USERS=""      # limit dump to special user (list without spaces eg. "user1,user2")
 
 Usage
 -----
@@ -56,12 +56,12 @@ Usage
 ### delete
 
     hubot rss delete https://github.com/Flipez.atom
-    hubot rss delete #room_name
+    hubot rss delete #room_name (only within the room or for users in HUBOT_RSS_DUMP_USERS list)
 
 ### list
 
     hubot rss list
-    hubot rss dump
+    hubot rss dump (only for users in HUBOT_RSS_DUMP_USERS list)
 
 
 Test

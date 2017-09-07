@@ -157,7 +157,7 @@ module.exports = (robot) ->
   robot.respond /rss\s+delete\s+#([^\s]+)$/im, (msg) ->
     room = msg.match[1].trim()
     logger.info "delete ##{room}"
-    checker.deleteRoom room
+    checker.deleteRoom(room, msg.message.room, msg.message.user.name)
     .then (res) ->
       msg.send res
     .catch (err) ->

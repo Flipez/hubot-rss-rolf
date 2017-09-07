@@ -165,11 +165,15 @@ module.exports = class RSSChecker extends events.EventEmitter
       else
         return reject "#{url} is not registered"
 
-  deleteRoom: (name) ->
+  deleteRoom: (name, myname, myuser) ->
     new Promise (resolve, reject) =>
-      rooms = @getAllFeeds() or {}
-      unless rooms.hasOwnProperty name
-        return reject "room ##{name} is not exists"
-      delete rooms[name]
-      @robot.brain.set 'feeds', rooms
-      resolve "deleted room ##{name}"
+      if ( name is myname || myuser in process.env.HUBOT_RSS_DUMP_USERS.split "," )
+        rooms = @getAllFeeds() or {}
+        unless rooms.hasOwnProperty name
+          return reject "room ##{name} is not exists"
+        delete rooms[name]
+        @robot.brain.set 'feeds', rooms
+        resolve "deleted room ##{name}"
+      else
+        return reject "not allowed to delete room ##{name} from outside"
+        
