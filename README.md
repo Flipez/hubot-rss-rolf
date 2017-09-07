@@ -38,6 +38,7 @@ Install
     export HUBOT_RSS_USERAGENT=hubot    # (default is "hubot-rss-reader/#{package_version}")
     export HUBOT_RSS_PRINTSUMMARY=true  # print summary (default is "true")
     export HUBOT_RSS_PRINTIMAGE=false   # print image in summary (default is "true")
+    export HUBOT_RSS_PRINTMARKDOWN=true # use markdown message (default is "false")
     export HUBOT_RSS_PRINTERROR=false   # print error message (default is "true")
     export HUBOT_RSS_IRCCOLORS=true     # use IRC color message (default is "false")
     export HUBOT_RSS_LIMIT_ON_ADD=false # limit printing entries on add new feed. (default is 5)
