@@ -21,15 +21,16 @@ FindRSS    = Promise.promisify require 'find-rss'
 
 ## config
 package_json = require path.join __dirname, '../package.json'
-process.env.HUBOT_RSS_INTERVAL     ||= 60*10  # 10 minutes
-process.env.HUBOT_RSS_HEADER       ||= ':sushi:'
-process.env.HUBOT_RSS_USERAGENT    ||= "hubot-rss-rolf/#{package_json.version}"
-process.env.HUBOT_RSS_PRINTSUMMARY ||= "true"
-process.env.HUBOT_RSS_PRINTIMAGE   ||= "true"
-process.env.HUBOT_RSS_PRINTERROR   ||= "true"
-process.env.HUBOT_RSS_IRCCOLORS    ||= "false"
-process.env.HUBOT_RSS_LIMIT_ON_ADD ||= 5
-process.env.HUBOT_RSS_DUMP_USERS   ||= ""
+process.env.HUBOT_RSS_INTERVAL      ||= 60*10  # 10 minutes
+process.env.HUBOT_RSS_HEADER        ||= ':sushi:'
+process.env.HUBOT_RSS_USERAGENT     ||= "hubot-rss-rolf/#{package_json.version}"
+process.env.HUBOT_RSS_PRINTSUMMARY  ||= "true"
+process.env.HUBOT_RSS_PRINTIMAGE    ||= "true"
+process.env.HUBOT_RSS_PRINTMARKDOWN ||= "false"
+process.env.HUBOT_RSS_PRINTERROR    ||= "true"
+process.env.HUBOT_RSS_IRCCOLORS     ||= "false"
+process.env.HUBOT_RSS_LIMIT_ON_ADD  ||= 5
+process.env.HUBOT_RSS_DUMP_USERS    ||= ""
 
 module.exports = (robot) ->
 

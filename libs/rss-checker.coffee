@@ -82,10 +82,12 @@ module.exports = class RSSChecker extends events.EventEmitter
           summary: cleanup_summary entities.decode(chunk.summary or chunk.description or '')
           feed:
             url: args.url
-            title: entities.decode(feedparser.meta.title or '')
+            title: entities.decode(feedparser.meta.title or 'visit feed')
           toString: ->
             if process.env.HUBOT_RSS_IRCCOLORS is "true"
               s = "#{IrcColor.pink(process.env.HUBOT_RSS_HEADER)} #{@title} #{IrcColor.purple('- ['+@feed.title+']')}\n#{IrcColor.lightgrey.underline(@url)}"
+            else if process.env.HUBOT_RSS_PRINTMARKDOWN is "true"
+              s = "#{process.env.HUBOT_RSS_HEADER} *#{@title} - [[#{@feed.title}](#{@url})]*"
             else
               s = "#{process.env.HUBOT_RSS_HEADER} #{@title} - [#{@feed.title}]\n#{@url}"
 
