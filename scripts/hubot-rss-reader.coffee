@@ -175,8 +175,8 @@ module.exports = (robot) ->
     msg.send "Moin, this is Rolf (#{package_json.version})"
 
   robot.respond /rss dump$/i, (msg) ->
-    feeds = checker.getAllFeeds()
     if msg.message.user.name in process.env.HUBOT_RSS_DUMP_USERS.split ","
+      feeds = checker.getAllFeeds()
       msg.send JSON.stringify feeds, null, 2
     else
       msg.send "not allowed"
