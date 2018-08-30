@@ -6,3 +6,4 @@ tmp
 *.log
 *.rdb
 .hubot_history
+/.idea
