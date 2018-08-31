@@ -1,7 +1,7 @@
 {
   "name": "hubot-rss-rolf",
   "private": false,
-  "version": "2.0.0.alpha.1",
+  "version": "2.0.0-beta1",
   "description": "Hubot RSS Reader",
   "main": "index.js",
   "keywords": [
