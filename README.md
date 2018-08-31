@@ -4,10 +4,6 @@ RSS Reader for each Chat Channels, works with Hubot.
 
 [![npm version](https://badge.fury.io/js/hubot-rss-rolf.svg)](https://badge.fury.io/js/hubot-rss-rolf)
 
-This project was forked from [hubot-rss-reader](https://github.com/shokai/hubot-rss-reader)
-from [shokai](https://github.com/shokai) with the fix from [yynozk](https://github.com/yynozk)
-and published as [hubot-rss-rolf](https://www.npmjs.com/package/hubot-rss-rolf) to make it useable for rocketchat again.
-
 - https://github.com/Flipez/hubot-rss-rolf
 - https://www.npmjs.org/package/hubot-rss-rolf
 
@@ -16,15 +12,13 @@ and published as [hubot-rss-rolf](https://www.npmjs.com/package/hubot-rss-rolf) 
 Requirements
 ------------
 
-- coffee-script 1.10+
 - hubot-brain
-  - recommend [hubot-mongodb-brain](http://npmjs.com/package/hubot-mongodb-brain).
+  - recommend [hubot-redis-brain](https://github.com/hubotio/hubot-redis-brain).
 
 Install
 -------
 
     % npm install hubot-rss-rolf -save
-    % npm install coffee-script@">=1.10.0" -save
 
 ### edit `external-script.json`
 
@@ -66,12 +60,9 @@ Usage
     hubot rss list
     hubot rss dump (only for users in HUBOT_RSS_DUMP_USERS list)
 
+## About
 
-Test
-----
+This project was forked from [hubot-rss-reader](https://github.com/shokai/hubot-rss-reader)
+from [shokai](https://github.com/shokai) with the fix from [yynozk](https://github.com/yynozk)
+and published as [hubot-rss-rolf](https://www.npmjs.com/package/hubot-rss-rolf) to make it useable for rocketchat again.
 
-    % npm install
-
-    % grunt
-    # or
-    % npm test
