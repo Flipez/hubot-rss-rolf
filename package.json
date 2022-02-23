@@ -26,7 +26,7 @@
     "debug": "*",
     "feedparser": "*",
     "find-rss": "*",
-    "html-entities": "*",
+    "html-entities": "1.2.1",
     "iconv": "*",
     "irc-colors": "^1.1.1",
     "lodash": "*",
